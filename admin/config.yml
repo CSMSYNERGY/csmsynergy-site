@@ -1,0 +1,107 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+site_url: https://www.csmsynergy.com
+display_url: https://www.csmsynergy.com
+logo_url: /images/logo.png
+
+collections:
+
+  # ─── BLOG POSTS ───
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Carolyn Miller" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Sales & ALS Framework", value: "sales" }
+          - { label: "Systems & CRM", value: "systems" }
+          - { label: "Leadership", value: "leadership" }
+          - { label: "Local SEO", value: "seo" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Short description shown on the blog index page" }
+      - { label: "Read Time", name: "read_time", widget: "string", default: "5 min read" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ─── PAGES ───
+  - name: "pages"
+    label: "Pages"
+    files:
+
+      # HOME PAGE
+      - name: "home"
+        label: "Homepage"
+        file: "index.html"
+        fields:
+          - { label: "Hero Title Line 1", name: "hero_title_1", widget: "string", default: "Stop Losing Deals to" }
+          - { label: "Hero Title Line 2 (highlighted)", name: "hero_title_2", widget: "string", default: "Broken Systems" }
+          - { label: "Hero Subtitle", name: "hero_sub", widget: "text" }
+          - { label: "Mission Statement", name: "mission", widget: "text" }
+
+      # ABOUT PAGE
+      - name: "about"
+        label: "About Carolyn"
+        file: "about.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "About Carolyn Miller | CSM Synergy" }
+          - { label: "Hero Subtitle", name: "hero_sub", widget: "text" }
+          - { label: "Origin Story — Paragraph 1", name: "story_p1", widget: "text" }
+          - { label: "Origin Story — Paragraph 2", name: "story_p2", widget: "text" }
+          - { label: "Pull Quote", name: "pull_quote", widget: "text" }
+          - { label: "Story — Paragraph 3", name: "story_p3", widget: "text" }
+          - { label: "Story — Paragraph 4", name: "story_p4", widget: "text" }
+          - { label: "Profile Photo", name: "photo", widget: "image" }
+
+      # ALS FRAMEWORK
+      - name: "als"
+        label: "ALS Framework Page"
+        file: "als-framework.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_sub", widget: "text" }
+          - { label: "Why It Works — Paragraph 1", name: "why_p1", widget: "text" }
+          - { label: "Why It Works — Paragraph 2", name: "why_p2", widget: "text" }
+          - { label: "Why It Works — Paragraph 3", name: "why_p3", widget: "text" }
+
+      # LEADERSHIP CIRCLE
+      - name: "leadership"
+        label: "Synergy Leadership Circle Page"
+        file: "leadership-call.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_sub", widget: "text" }
+          - { label: "Is This You — Paragraph 1", name: "isthisyou_p1", widget: "text" }
+          - { label: "Is This You — Paragraph 2", name: "isthisyou_p2", widget: "text" }
+          - { label: "Waitlist Intro Text", name: "waitlist_text", widget: "text" }
+
+      # BUILD BRIDGE
+      - name: "buildbridge"
+        label: "Build Bridge Page"
+        file: "build-bridge.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_sub", widget: "text" }
+
+      # CONTACT
+      - name: "contact"
+        label: "Contact Page"
+        file: "contact.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Hero Description", name: "hero_desc", widget: "text" }
+          - { label: "Email Address", name: "email", widget: "string", default: "carolyn@csmsynergy.com" }
+          - { label: "Phone Number", name: "phone", widget: "string", default: "816-300-3600" }
+          - { label: "Location", name: "location", widget: "string", default: "Cottage Grove, TN" }

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Build Bridge™ — Construction Platform Integrations | CSM Synergy — Connect SmartBuild, Idearoom, QuickBooks & Monday.com to GHL</title>
+<meta name="description" content="The  Build Bridge™ — Construction Platform Integrations app connects SmartBuild, Idearoom, QuickBooks, and Monday.com directly to your GoHighLevel CRM. Built for post frame builders, shed builders, barndominium builders, and construction companies. Eliminate double entry forever.">
+<meta name="keywords" content="construction CRM integration, SmartBuild GHL integration, Idearoom GoHighLevel, QuickBooks construction CRM, Monday.com construction, GHL marketplace app, shed builder software, post frame builder CRM, barndominium builder systems, construction software integration">
+<meta property="og:title" content=" Build Bridge™ — Construction Platform Integrations | CSM Synergy">
+<meta property="og:description" content="One app that connects all your construction software to GoHighLevel. SmartBuild, Idearoom, QuickBooks, Monday.com — all talking to each other.">
+<meta property="og:url" content="https://www.csmsynergy.com/integrations">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.csmsynergy.com/integrations">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #3d3672;
+    --purple-dark: #2a2450;
+    --purple-light: #5a5295;
+    --teal: #1b7895;
+    --teal-dark: #145e76;
+    --teal-light: #2498be;
+    --mint: #75e6da;
+    --sky: #dbeaff;
+    --white: #ffffff;
+    --off-white: #f8faff;
+    --gray-100: #f1f3f8;
+    --gray-200: #e2e6ef;
+    --gray-500: #6b7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
+    --font-display: 'Play', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --radius: 4px;
+    --radius-lg: 12px;
+    --shadow: 0 4px 24px rgba(61,54,114,0.10);
+    --shadow-lg: 0 12px 48px rgba(61,54,114,0.18);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); font-size: 17px; line-height: 1.7; color: var(--gray-900); background: var(--white); overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; }
+  h1 { font-size: clamp(2.2rem, 4.5vw, 3.5rem); font-weight: 700; letter-spacing: -0.02em; }
+  h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 700; letter-spacing: -0.015em; }
+  h3 { font-size: clamp(1.1rem, 1.8vw, 1.35rem); font-weight: 700; }
+  p { color: var(--gray-700); }
+  .eyebrow { font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mint); display: block; margin-bottom: 0.75rem; }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 80px 0; }
+
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; letter-spacing: 0.03em; border-radius: var(--radius); cursor: pointer; transition: all 0.2s ease; border: 2px solid transparent; }
+  .btn-primary { background: var(--mint); color: var(--purple-dark); border-color: var(--mint); }
+  .btn-primary:hover { background: transparent; color: var(--mint); transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.5); }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); transform: translateY(-2px); }
+  .btn-teal { background: var(--teal); color: var(--white); border-color: var(--teal); }
+  .btn-teal:hover { background: var(--teal-dark); border-color: var(--teal-dark); transform: translateY(-2px); }
+  .btn svg { width: 16px; height: 16px; flex-shrink: 0; transition: transform 0.2s; }
+  .btn:hover svg { transform: translateX(3px); }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(61,54,114,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 24px; }
+  .nav-inner { max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .nav-logo { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--white); letter-spacing: -0.02em; }
+  .nav-logo span { color: var(--mint); }
+  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+  .nav-links a { font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--mint); }
+  .nav-cta { background: var(--mint); color: var(--purple-dark) !important; padding: 8px 20px; border-radius: var(--radius); }
+  .nav-cta:hover { background: var(--white); color: var(--purple-dark) !important; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--white); }
+
+  /* HERO */
+  #hero {
+    min-height: 92vh;
+    background: var(--purple-dark);
+    display: flex;
+    align-items: center;
+    padding-top: 68px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 55% 60% at 90% 10%, rgba(27,120,149,0.3) 0%, transparent 60%),
+      radial-gradient(ellipse 35% 40% at 10% 90%, rgba(117,230,218,0.1) 0%, transparent 55%);
+  }
+  .hero-dots {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 80px 0;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(117,230,218,0.1);
+    border: 1px solid rgba(117,230,218,0.25);
+    padding: 6px 14px; border-radius: 100px;
+    font-size: 0.78rem; font-weight: 700; color: var(--mint);
+    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;
+  }
+  .ghl-dot { display: inline-block; width: 8px; height: 8px; background: #00d4aa; border-radius: 50%; }
+  .hero-title { color: var(--white); margin-bottom: 1.5rem; }
+  .hero-title em { font-style: normal; color: var(--mint); }
+  .hero-desc { font-size: 1.08rem; color: rgba(255,255,255,0.68); margin-bottom: 2rem; max-width: 500px; line-height: 1.8; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .hero-trust {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 0.82rem; color: rgba(255,255,255,0.4);
+  }
+  .trust-avatars { display: flex; }
+  .trust-avatars span {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--purple-light);
+    border: 2px solid var(--purple-dark);
+    margin-right: -8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.65rem; font-weight: 700; color: var(--mint);
+    font-family: var(--font-display);
+  }
+
+  /* FLOW DIAGRAM */
+  .hero-flow {
+    position: relative;
+    display: flex; flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .flow-hub {
+    background: var(--teal);
+    border-radius: var(--radius-lg);
+    padding: 20px 28px;
+    text-align: center;
+    border: 2px solid rgba(117,230,218,0.4);
+    position: relative;
+    z-index: 2;
+    width: 220px;
+  }
+  .flow-hub-label { font-family: var(--font-display); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+  .flow-hub-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--white); }
+  .flow-hub-sub { font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .flow-connector {
+    width: 2px; height: 32px;
+    background: linear-gradient(to bottom, var(--mint), rgba(117,230,218,0.2));
+    position: relative;
+  }
+  .flow-connector::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 50%; transform: translateX(-50%);
+    width: 0; height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid rgba(117,230,218,0.4);
+  }
+  .flow-apps-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 380px;
+  }
+  .flow-app {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s;
+    cursor: default;
+  }
+  .flow-app:hover { background: rgba(255,255,255,0.1); border-color: var(--mint); transform: translateY(-2px); }
+  .app-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  .app-icon.smartbuild { background: rgba(27,120,149,0.4); color: var(--mint); }
+  .app-icon.idearoom { background: rgba(117,230,218,0.15); color: var(--mint); }
+  .app-icon.quickbooks { background: rgba(45,180,100,0.2); color: #4ade80; }
+  .app-icon.monday { background: rgba(240,100,50,0.2); color: #fb923c; }
+  .app-name { font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; color: var(--white); }
+  .app-type { font-size: 0.7rem; color: rgba(255,255,255,0.45); }
+  .flow-status {
+    position: absolute;
+    top: -6px; right: -6px;
+    width: 12px; height: 12px;
+    background: #4ade80;
+    border-radius: 50%;
+    border: 2px solid var(--purple-dark);
+  }
+  .flow-app { position: relative; }
+
+  /* PROBLEM STRIP */
+  #problem-strip {
+    background: var(--gray-100);
+    padding: 48px 0;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .problem-strip-inner { display: flex; align-items: center; gap: 48px; flex-wrap: wrap; justify-content: center; }
+  .prob-item { display: flex; align-items: center; gap: 12px; }
+  .prob-x {
+    width: 32px; height: 32px;
+    background: #fee2e2;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    color: #ef4444;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .prob-text { font-size: 0.9rem; color: var(--gray-700); font-weight: 500; }
+  .prob-divider { width: 1px; height: 32px; background: var(--gray-200); }
+
+  /* HOW IT WORKS */
+  #how { background: var(--white); }
+  .how-header { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+  .how-header h2 { color: var(--gray-900); }
+  .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 60px; }
+  .how-step {
+    background: var(--white);
+    padding: 36px 28px;
+    position: relative;
+  }
+  .step-num {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .step-num::before {
+    content: '';
+    display: inline-block;
+    width: 24px; height: 24px;
+    background: var(--sky);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--teal);
+    text-align: center;
+    line-height: 24px;
+  }
+  .step-1::before { content: '1'; }
+  .step-2::before { content: '2'; }
+  .step-3::before { content: '3'; }
+  .step-4::before { content: '4'; }
+  .how-step h4 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.75rem; }
+  .how-step p { font-size: 0.88rem; color: var(--gray-500); line-height: 1.65; }
+
+  /* INTEGRATIONS DETAIL */
+  #integrations { background: var(--off-white); }
+  .integrations-header { text-align: center; max-width: 680px; margin: 0 auto 60px; }
+  .int-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .int-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .int-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+  .int-card.smartbuild::before { background: linear-gradient(90deg, var(--teal), var(--mint)); }
+  .int-card.idearoom::before { background: linear-gradient(90deg, var(--purple), var(--teal)); }
+  .int-card.quickbooks::before { background: linear-gradient(90deg, #16a34a, #4ade80); }
+  .int-card.monday::before { background: linear-gradient(90deg, #ea580c, #fb923c); }
+  .int-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+  .int-header { display: flex; align-items: center; gap: 16px; margin-bottom: 1.5rem; }
+  .int-logo {
+    width: 52px; height: 52px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .int-logo.sb { background: rgba(27,120,149,0.12); color: var(--teal); }
+  .int-logo.ir { background: var(--sky); color: var(--purple); }
+  .int-logo.qb { background: rgba(22,163,74,0.1); color: #16a34a; }
+  .int-logo.mo { background: rgba(234,88,12,0.1); color: #ea580c; }
+  .int-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--gray-900); }
+  .int-category { font-size: 0.78rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+  .int-card p { font-size: 0.93rem; color: var(--gray-700); line-height: 1.7; margin-bottom: 1.5rem; }
+  .int-features { list-style: none; display: grid; gap: 8px; }
+  .int-features li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 0.875rem; color: var(--gray-700);
+  }
+  .int-features li::before {
+    content: '';
+    width: 18px; height: 18px;
+    background: var(--sky);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 3px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231b7895' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .coming-badge {
+    display: inline-block;
+    background: rgba(61,54,114,0.08);
+    color: var(--purple);
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* DATA FLOW VISUAL */
+  #dataflow { background: var(--purple-dark); padding: 80px 0; }
+  .dataflow-header { text-align: center; max-width: 680px; margin: 0 auto 60px; }
+  .dataflow-header h2 { color: var(--white); }
+  .dataflow-header p { color: rgba(255,255,255,0.6); }
+  .flow-visual {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .flow-col { display: grid; gap: 12px; }
+  .flow-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .flow-item-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .flow-item-name { font-family: var(--font-display); font-size: 0.88rem; font-weight: 700; color: var(--white); }
+  .flow-item-detail { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+  .flow-center {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    padding: 0 16px;
+  }
+  .flow-center-box {
+    background: var(--teal);
+    border: 2px solid rgba(117,230,218,0.4);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    text-align: center;
+    min-width: 160px;
+  }
+  .flow-center-box .label { font-size: 0.65rem; font-family: var(--font-display); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+  .flow-center-box .name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--white); }
+  .flow-arrows { font-size: 1.5rem; color: var(--mint); opacity: 0.5; }
+  .flow-label-row { display: flex; justify-content: space-between; margin-top: 24px; }
+  .flow-label { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); text-align: center; }
+
+  /* PRICING */
+  #pricing { background: var(--white); }
+  .pricing-header { text-align: center; max-width: 680px; margin: 0 auto 60px; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+  .pricing-card {
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 36px 28px;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .pricing-card:hover { box-shadow: var(--shadow); }
+  .pricing-card.featured {
+    background: var(--purple-dark);
+    border-color: var(--purple);
+    transform: scale(1.03);
+  }
+  .pricing-card.featured:hover { transform: scale(1.05); }
+  .popular-badge {
+    position: absolute;
+    top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--mint);
+    color: var(--purple-dark);
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 16px;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+  .plan-name { font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+  .plan-name.light { color: var(--gray-500); }
+  .plan-name.featured { color: var(--mint); }
+  .plan-price { font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 0.25rem; }
+  .plan-price.light { color: var(--gray-900); }
+  .plan-price.featured-price { color: var(--white); }
+  .plan-period { font-size: 0.85rem; color: var(--gray-500); margin-bottom: 1.5rem; }
+  .plan-period.dark { color: rgba(255,255,255,0.4); }
+  .plan-divider { height: 1px; background: var(--gray-200); margin-bottom: 1.5rem; }
+  .plan-divider.dark { background: rgba(255,255,255,0.1); }
+  .plan-features { list-style: none; display: grid; gap: 10px; margin-bottom: 2rem; }
+  .plan-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; }
+  .plan-features li.light { color: var(--gray-700); }
+  .plan-features li.dark { color: rgba(255,255,255,0.7); }
+  .check { width: 16px; height: 16px; flex-shrink: 0; margin-top: 3px; }
+  .check.teal { color: var(--teal); }
+  .check.mint { color: var(--mint); }
+
+  /* FAQ */
+  #faq { background: var(--off-white); }
+  .faq-header { text-align: center; max-width: 600px; margin: 0 auto 48px; }
+  .faq-list { max-width: 760px; margin: 0 auto; display: grid; gap: 2px; background: var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; }
+  .faq-item { background: var(--white); }
+  .faq-q {
+    width: 100%; text-align: left; padding: 20px 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-display); font-size: 0.97rem; font-weight: 700; color: var(--gray-900);
+    cursor: pointer; background: none; border: none; gap: 16px;
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--teal); }
+  .faq-q svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--gray-500); transition: transform 0.3s; }
+  .faq-q.open svg { transform: rotate(45deg); color: var(--teal); }
+  .faq-a { display: none; padding: 0 24px 20px; font-size: 0.93rem; color: var(--gray-700); line-height: 1.75; }
+  .faq-a.open { display: block; }
+
+  /* CTA */
+  #cta { background: var(--teal-dark); padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
+  #cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 80% at 50% 0%, rgba(117,230,218,0.12) 0%, transparent 60%); }
+  .cta-inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; }
+  #cta h2 { color: var(--white); margin-bottom: 1rem; }
+  #cta p { color: rgba(255,255,255,0.65); font-size: 1.05rem; margin-bottom: 2.5rem; }
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .cta-note { margin-top: 1.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.35); }
+
+  /* FOOTER */
+  footer { background: var(--purple-dark); padding: 48px 0 28px; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .footer-bottom p { font-size: 0.82rem; color: rgba(255,255,255,0.3); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+  .footer-links a:hover { color: var(--mint); }
+  .footer-nav { display: flex; gap: 2rem; margin-bottom: 32px; flex-wrap: wrap; }
+  .footer-nav a { font-family: var(--font-display); font-size: 0.85rem; color: rgba(255,255,255,0.55); font-weight: 700; letter-spacing: 0.04em; transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--mint); }
+  .footer-logo { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+  .footer-logo span { color: var(--mint); }
+
+  /* ANIMATIONS */
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    .hero-inner, .flow-visual { grid-template-columns: 1fr; }
+    .hero-flow { display: none; }
+    .how-steps, .int-grid, .pricing-grid { grid-template-columns: 1fr; }
+    .pricing-card.featured { transform: none; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--purple-dark); padding: 2rem; gap: 1.5rem; align-items: flex-start; }
+    .nav-links.open a { font-size: 1.1rem; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 60px 0; }
+    .problem-strip-inner { flex-direction: column; gap: 20px; align-items: flex-start; }
+    .prob-divider { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/"><img src="/images/logo.png" alt="CSM Synergy" style="height:46px;width:auto;display:block;"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#solution">Systems</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/integrations" class="active">Integrations</a></li>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/brainstorm-session" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <div class="nav-hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">
+          <span class="ghl-dot"></span>
+          Available on the GHL Marketplace
+        </div>
+        <h1 class="hero-title">Meet Your Tools<br><em>Where They Are</em></h1>
+        <p class="hero-desc">
+          <strong style="color:var(--white);">Build Bridge™</strong> connects the software your construction business is already running on — and introduces the tools that fill your gaps. Whatever you're using, we connect it to your GHL CRM so everything talks to each other and nothing falls through the cracks.
+        </p>
+        <div class="hero-ctas">
+          <a href="/brainstorm-session" class="btn btn-primary">
+            Get Early Access
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+          <a href="#how" class="btn btn-outline">See How It Works</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-avatars">
+            <span>BB</span><span>CB</span><span>KK</span><span>RT</span>
+          </div>
+          Built for post frame, shed &amp; barndominium builders
+        </div>
+      </div>
+
+      <div class="hero-flow fade-up">
+        <div class="flow-apps-row">
+          <div class="flow-app">
+            <div class="flow-status"></div>
+            <div class="app-icon smartbuild">SB</div>
+            <div><div class="app-name">SmartBuild</div><div class="app-type">Configure &amp; Price</div></div>
+          </div>
+          <div class="flow-app">
+            <div class="flow-status"></div>
+            <div class="app-icon idearoom">IR</div>
+            <div><div class="app-name">Idearoom</div><div class="app-type">3D Configurator</div></div>
+          </div>
+          <div class="flow-app">
+            <div class="flow-status"></div>
+            <div class="app-icon quickbooks">QB</div>
+            <div><div class="app-name">QuickBooks</div><div class="app-type">Accounting</div></div>
+          </div>
+          <div class="flow-app">
+            <div class="flow-status"></div>
+            <div class="app-icon monday">Mo</div>
+            <div><div class="app-name">Monday.com</div><div class="app-type">We Introduce This</div></div>
+          </div>
+        </div>
+        <div class="flow-connector"></div>
+        <div class="flow-hub">
+          <div class="flow-hub-label">Powered by</div>
+          <div class="flow-hub-name">Synergy CRM</div>
+          <div class="flow-hub-sub">GoHighLevel Platform</div>
+        </div>
+        <div style="margin-top:20px;background:rgba(117,230,218,0.08);border:1px solid rgba(117,230,218,0.2);border-radius:var(--radius);padding:12px 20px;text-align:center;max-width:300px;">
+          <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">Using something else? We likely connect that too — book a call and let's find out.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM STRIP -->
+<section id="problem-strip">
+  <div class="container">
+    <div class="problem-strip-inner">
+      <div class="prob-item">
+        <div class="prob-x">✕</div>
+        <span class="prob-text">Entering the same lead data in multiple tools</span>
+      </div>
+      <div class="prob-divider"></div>
+      <div class="prob-item">
+        <div class="prob-x">✕</div>
+        <span class="prob-text">Quotes and configs that never make it into your CRM</span>
+      </div>
+      <div class="prob-divider"></div>
+      <div class="prob-item">
+        <div class="prob-x">✕</div>
+        <span class="prob-text">No visibility into project status once a deal closes</span>
+      </div>
+      <div class="prob-divider"></div>
+      <div class="prob-item">
+        <div class="prob-x">✕</div>
+        <span class="prob-text">Sales and production teams working from different information</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="how-header fade-up">
+      <span class="eyebrow">How It Works</span>
+      <h2>Connect What You Have. Fill the Gaps. Run Cleaner.</h2>
+      <p style="margin-top:1rem;color:var(--gray-500);">Build Bridge™ meets your business where it is — connecting the tools you're already using and introducing the right ones where you have gaps.</p>
+    </div>
+    <div class="how-steps fade-up">
+      <div class="how-step">
+        <div class="step-num step-1">Connect</div>
+        <h4>Install the App</h4>
+        <p>Add Build Bridge™ to your GoHighLevel account from the GHL Marketplace in minutes. No dev work needed.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num step-2">Configure</div>
+        <h4>Link Your Platforms</h4>
+        <p>Connect the tools you're already running. Not sure what connects? We'll walk you through exactly what's possible for your specific setup.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num step-3">Map</div>
+        <h4>Define Your Data Flow</h4>
+        <p>Tell the app what triggers what — a new SmartBuild quote creates a GHL contact, a won deal creates a Monday.com project, and more.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num step-4">Run</div>
+        <h4>Let It Work for You</h4>
+        <p>Your data flows automatically in the background. Your team works in one place. Your business runs cleaner.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTEGRATIONS DETAIL -->
+<section id="integrations">
+  <div class="container">
+    <div class="integrations-header fade-up">
+      <span class="eyebrow">Current Integrations</span>
+      <h2>The Tools We Connect — Starting Here, Growing Fast</h2>
+      <p style="margin-top:1rem;color:var(--gray-500);">These are the platforms we've built deep, purpose-built connections for. Don't see yours? Book a call — we're expanding the library and want to know what you're running.</p>
+    </div>
+    <div class="int-grid">
+
+      <div class="int-card smartbuild fade-up">
+        <div class="int-header">
+          <div class="int-logo sb">SB</div>
+          <div>
+            <div class="int-title">SmartBuild</div>
+            <div class="int-category">Configure, Price &amp; Quote</div>
+          </div>
+        </div>
+        <p>SmartBuild is where your building configurations and quotes live. This integration pulls that data directly into GHL — so every quote, every customer, and every building spec is visible in your CRM pipeline without anyone having to copy and paste.</p>
+        <ul class="int-features">
+          <li>New quotes auto-create or update contacts in GHL</li>
+          <li>Building specs synced to the contact record</li>
+          <li>Quote status changes trigger GHL pipeline moves</li>
+          <li>Quote values populate deal values in CRM</li>
+          <li>Automated follow-up sequences triggered from quote activity</li>
+        </ul>
+      </div>
+
+      <div class="int-card idearoom fade-up">
+        <div class="int-header">
+          <div class="int-logo ir">IR</div>
+          <div>
+            <div class="int-title">Idearoom</div>
+            <div class="int-category">3D Building Configurator</div>
+          </div>
+        </div>
+        <p>When a customer designs their building in Idearoom, that's a high-intent lead. This integration captures those configurator sessions and brings them into GHL as hot leads — complete with their design specs attached — so your team can follow up fast.</p>
+        <ul class="int-features">
+          <li>Configurator sessions captured as GHL leads instantly</li>
+          <li>Building design data attached to contact record</li>
+          <li>High-intent trigger fires follow-up automation</li>
+          <li>Design link shared with sales rep automatically</li>
+          <li>Customer design history visible in contact timeline</li>
+        </ul>
+      </div>
+
+      <div class="int-card quickbooks fade-up">
+        <div class="int-header">
+          <div class="int-logo qb">QB</div>
+          <div>
+            <div class="int-title">QuickBooks</div>
+            <div class="int-category">Accounting &amp; Invoicing <span class="coming-badge">Coming Soon</span></div>
+          </div>
+        </div>
+        <p>Stop toggling between your CRM and accounting software. When a deal closes in GHL, QuickBooks gets updated. When an invoice is paid, your CRM knows about it. Your sales and finance teams finally have the same picture.</p>
+        <ul class="int-features">
+          <li>Won deals in GHL create customers in QuickBooks</li>
+          <li>Invoice creation triggered from GHL pipeline stages</li>
+          <li>Payment received status synced back to CRM</li>
+          <li>Revenue reporting connected to GHL contacts</li>
+          <li>Customer billing history visible in GHL</li>
+        </ul>
+      </div>
+
+      <div class="int-card monday fade-up">
+        <div class="int-header">
+          <div class="int-logo mo">Mo</div>
+          <div>
+            <div class="int-title">Monday.com</div>
+            <div class="int-category">Project Management — We Introduce This <span class="coming-badge">Coming Soon</span></div>
+          </div>
+        </div>
+        <p>Most builders don't have a project management system in place when they come to us — and that's completely normal. As part of the Streamlined Construction System, we recommend and configure Monday.com for your production team. Once it's set up, Build Bridge™ connects it directly to GHL so every closed deal automatically creates a new project board — and your production team always knows exactly what's coming.</p>
+        <ul class="int-features">
+          <li>We set up and configure Monday.com for your team</li>
+          <li>Closed deals in GHL trigger new project boards automatically</li>
+          <li>Customer and building data pre-populated on every board</li>
+          <li>Project milestone updates sync back to GHL contact timeline</li>
+          <li>Sales and production finally working from the same information</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DATA FLOW -->
+<section id="dataflow">
+  <div class="container">
+    <div class="dataflow-header fade-up">
+      <span class="eyebrow">Data Architecture</span>
+      <h2>One Source of Truth for Your Entire Business</h2>
+      <p>Your GHL CRM becomes the hub that every tool connects to — so nothing falls through the cracks and everyone works from the same data.</p>
+    </div>
+    <div class="flow-visual fade-up">
+      <div class="flow-col">
+        <div style="font-family:var(--font-display);font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:8px;">Inputs</div>
+        <div class="flow-item">
+          <div class="flow-item-dot" style="background:#2498be;"></div>
+          <div><div class="flow-item-name">New SmartBuild Quote</div><div class="flow-item-detail">Contact + building data</div></div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item-dot" style="background:#75e6da;"></div>
+          <div><div class="flow-item-name">Idearoom Design Session</div><div class="flow-item-detail">High-intent lead capture</div></div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item-dot" style="background:#4ade80;"></div>
+          <div><div class="flow-item-name">QuickBooks Payment</div><div class="flow-item-detail">Invoice status update</div></div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item-dot" style="background:#fb923c;"></div>
+          <div><div class="flow-item-name">Monday.com</div><div class="flow-item-detail">Introduced &amp; configured by us</div></div>
+        </div>
+      </div>
+
+      <div class="flow-center">
+        <div class="flow-arrows">⟷</div>
+        <div class="flow-center-box">
+          <div class="label">Your Hub</div>
+          <div class="name">Synergy CRM</div>
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.5);margin-top:4px;">GoHighLevel</div>
+        </div>
+        <div class="flow-arrows">⟷</div>
+      </div>
+
+      <div class="flow-col">
+        <div style="font-family:var(--font-display);font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:8px;">Outputs</div>
+        <div class="flow-item">
+          <div class="flow-item-dot" style="background:#75e6da;"></div>
+          <div><div class="flow-item-name">Contact Created / Updated</div><div class="flow-item-detail">Full record, zero typing</div></div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item-dot" style="background:#75e6da;"></div>
+          <div><div class="flow-item-name">Pipeline Stage Moved</div><div class="flow-item-detail">Visual progress tracking</div></div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item-dot" style="background:#75e6da;"></div>
+          <div><div class="flow-item-name">Follow-Up Triggered</div><div class="flow-item-detail">Automated sequences fire</div></div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item-dot" style="background:#75e6da;"></div>
+          <div><div class="flow-item-name">Project Board Created</div><div class="flow-item-detail">Monday.com ready to build</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-header fade-up">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do I need to already have GoHighLevel?
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="faq-a">Yes — this app is a GHL Marketplace integration, so it installs directly into your GoHighLevel account. If you don't have GHL yet, we can help you get set up through our Synergy CRM service, which includes a fully configured GHL account built specifically for post frame builders, shed builders, and barndominium companies.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Does this require any coding or technical setup?
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="faq-a">No coding required. You install the app from the GHL Marketplace, connect your accounts through our guided setup wizard, and configure your data flow rules using a simple point-and-click interface. For more complex custom mappings, our team can assist during onboarding.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How often does data sync between platforms?
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="faq-a">Most integrations run on real-time webhooks — meaning when something happens in SmartBuild or Idearoom, it shows up in GHL within seconds. For batch processes like QuickBooks reconciliation, syncs run on a configurable schedule (default: every 15 minutes).</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What if I only use one or two of these platforms?
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="faq-a">No problem — each integration can be enabled or disabled independently. You only pay for and use the connections that are relevant to your business. The Starter plan covers SmartBuild and Idearoom. Add QuickBooks and Monday.com when you're ready on the Growth plan.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          When will QuickBooks and Monday.com be available?
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <div class="faq-a">QuickBooks and Monday.com integrations are currently in active development. Early access customers who book a Brainstorm Session will be first in line for beta access. Book a call to get on the waitlist and we'll keep you updated on the timeline.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-inner fade-up">
+    <span class="eyebrow" style="color:var(--mint);">Ready to Connect Everything?</span>
+    <h2>Stop the Double Entry. Start Running a Cleaner Business.</h2>
+    <p>Book a free Brainstorm Session and we'll walk you through exactly how the  Build Bridge™ — Construction Platform Integrations app would work for your specific setup.</p>
+    <div class="cta-buttons">
+      <a href="/brainstorm-session" class="btn btn-primary">
+        Book a Free Session
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+      <a href="/" class="btn btn-outline">Back to Home</a>
+    </div>
+    <p class="cta-note">Free 30-minute session • No obligation • Built for post frame, shed &amp; barndominium builders</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-logo"><img src="/images/logo.png" alt="CSM Synergy" style="height:52px;width:auto;margin-bottom:0.5rem;"></div>
+    <nav class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/integrations">Integrations</a>
+      <a href="/systems">Systems</a>
+      <a href="/als-framework">ALS Framework</a>
+      <a href="/synergy-leadership-circle">Leadership</a>
+      <a href="/contact-us">Contact</a>
+    </nav>
+      <div style="border-top:1px solid rgba(255,255,255,0.06);margin-top:32px;padding-top:32px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:680px;">
+      <div>
+        <p style="font-family:var(--font-display);font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mint);margin-bottom:10px;">CSM:</p>
+        <p style="font-size:0.88rem;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;"><strong style="color:rgba(255,255,255,0.7);">C</strong>reate a Clear Plan,<br><strong style="color:rgba(255,255,255,0.7);">S</strong>uccessfully Implement,<br><strong style="color:rgba(255,255,255,0.7);">M</strong>aster your Business!<br><em style="color:rgba(255,255,255,0.3);font-size:0.82rem;">~Carolyn Sue Miller</em></p>
+      </div>
+      <div>
+        <p style="font-family:var(--font-display);font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mint);margin-bottom:10px;">Synergy:</p>
+        <p style="font-size:0.88rem;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">When two or more people team up, their combined effort creates something even greater than what they could do by themselves.</p>
+      </div>
+    </div>
+  </div>
+<div class="footer-bottom">
+      <p>&copy; 2025 CSM Synergy &amp; Carolyn Miller. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-and-conditions">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => { if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 100); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/brainstorm-session"
+  to = "/brainstorm-session.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/als-framework"
+  to = "/als-framework.html"
+  status = 200
+
+[[redirects]]
+  from = "/build-bridge"
+  to = "/build-bridge.html"
+  status = 200
+
+[[redirects]]
+  from = "/synergy-leadership-circle"
+  to = "/leadership-call.html"
+  status = 200
+
+[[redirects]]
+  from = "/leadership-call"
+  to = "/leadership-call.html"
+  status = 200
+
+[[redirects]]
+  from = "/streamlined-construction-system"
+  to = "/streamlined-construction-system.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
