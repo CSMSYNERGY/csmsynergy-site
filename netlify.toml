@@ -57,6 +57,16 @@
   status = 200
 
 [[redirects]]
+  from = "/blog/why-construction-salespeople-lose-deals"
+  to = "/blog-post.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/crm-costing-you-deals"
+  to = "/blog-crm-costing-you-deals.html"
+  status = 200
+
+[[redirects]]
   from = "/ghl-phone-dialer-privacy"
   to = "/ghl-phone-dialer-privacy.html"
   status = 200
