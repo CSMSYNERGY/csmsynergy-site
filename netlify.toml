@@ -52,6 +52,11 @@
   status = 200
 
 [[redirects]]
+  from = "/blog-post"
+  to = "/blog-post.html"
+  status = 200
+
+[[redirects]]
   from = "/ghl-phone-dialer-privacy"
   to = "/ghl-phone-dialer-privacy.html"
   status = 200
