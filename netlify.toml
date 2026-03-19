@@ -82,6 +82,11 @@
   status = 200
 
 [[redirects]]
+  from = "/blog/smartbuild-ghl-integration"
+  to = "/blog-smartbuild-ghl-integration.html"
+  status = 200
+
+[[redirects]]
   from = "/ghl-phone-dialer-privacy"
   to = "/ghl-phone-dialer-privacy.html"
   status = 200
