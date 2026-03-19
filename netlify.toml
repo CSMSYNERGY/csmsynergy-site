@@ -72,6 +72,11 @@
   status = 200
 
 [[redirects]]
+  from = "/blog/post-frame-local-seo"
+  to = "/blog-post-frame-local-seo.html"
+  status = 200
+
+[[redirects]]
   from = "/ghl-phone-dialer-privacy"
   to = "/ghl-phone-dialer-privacy.html"
   status = 200
