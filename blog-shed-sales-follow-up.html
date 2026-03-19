@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Follow-Up Formula: How to Stay in Front of Shed Buyers Without Being Annoying | CSM Synergy Blog</title>
+<meta name="description" content="Most shed salespeople either follow up too aggressively and push buyers away, or not at all and lose to whoever called second. Here's the follow-up balance that actually closes deals.">
+<meta name="keywords" content="shed sales follow up, shed dealer sales tips, construction sales follow up, shed buyer psychology, sales follow up system, GoHighLevel automation, shed sales process">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<link rel="canonical" href="https://www.csmsynergy.com/blog/shed-sales-follow-up">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #3d3672; --purple-dark: #2a2450; --teal: #1b7895;
+    --teal-dark: #145e76; --teal-light: #2498be; --mint: #75e6da;
+    --sky: #dbeaff; --white: #ffffff; --off-white: #f8faff;
+    --gray-100: #f1f3f8; --gray-200: #e2e6ef; --gray-500: #6b7280;
+    --gray-700: #374151; --gray-900: #111827;
+    --font-display: 'Play', sans-serif; --font-body: 'DM Sans', sans-serif;
+    --radius: 4px; --radius-lg: 12px;
+    --shadow: 0 4px 24px rgba(61,54,114,0.10);
+    --content-width: 720px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); font-size: 18px; line-height: 1.8; color: var(--gray-900); background: var(--white); overflow-x: hidden; }
+  a { text-decoration: none; color: inherit; }
+  h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.25; }
+  p { color: var(--gray-700); }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; border-radius: var(--radius); cursor: pointer; transition: all 0.2s; border: 2px solid transparent; }
+  .btn-primary { background: var(--mint); color: var(--purple-dark); border-color: var(--mint); }
+  .btn-primary:hover { background: transparent; color: var(--mint); transform: translateY(-2px); }
+  .btn-teal { background: var(--teal); color: var(--white); border-color: var(--teal); }
+  .btn-teal:hover { background: var(--teal-dark); transform: translateY(-2px); }
+  .btn-outline-dark { background: transparent; color: var(--teal); border-color: var(--teal); }
+  .btn-outline-dark:hover { background: var(--teal); color: var(--white); transform: translateY(-2px); }
+  .btn svg { width: 15px; height: 15px; flex-shrink: 0; transition: transform 0.2s; }
+  .btn:hover svg { transform: translateX(3px); }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(61,54,114,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 24px; }
+  .nav-inner { max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .nav-logo img { height: 46px; width: auto; display: block; }
+  .nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
+  .nav-links > li { position: relative; }
+  .nav-links > li > a { display: flex; align-items: center; gap: 5px; font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.2s; padding: 0 14px; height: 68px; }
+  .nav-links > li > a:hover, .nav-links > li > a.active { color: var(--mint); }
+  .nav-links > li > a .nav-arrow { width: 10px; height: 10px; flex-shrink: 0; transition: transform 0.2s; }
+  .nav-links > li:hover > a .nav-arrow { transform: rotate(180deg); }
+  .nav-dropdown { position: absolute; top: 68px; left: 0; background: var(--purple-dark); border: 1px solid rgba(255,255,255,0.1); border-top: 2px solid var(--mint); border-radius: 0 0 var(--radius-lg) var(--radius-lg); min-width: 240px; padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: all 0.2s ease; box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
+  .nav-links > li:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav-dropdown a { display: flex; align-items: center; gap: 10px; padding: 11px 20px; font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.65); transition: all 0.15s; border-left: 3px solid transparent; height: auto; }
+  .nav-dropdown a:hover { color: var(--mint); background: rgba(255,255,255,0.04); border-left-color: var(--mint); padding-left: 24px; }
+  .nav-dropdown-label { padding: 8px 20px 4px; font-family: var(--font-display); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+  .nav-cta-btn { background: var(--mint) !important; color: var(--purple-dark) !important; padding: 8px 18px !important; border-radius: var(--radius) !important; height: auto !important; margin-left: 12px; letter-spacing: 0.04em !important; }
+  .nav-cta-btn:hover { background: var(--white) !important; color: var(--purple-dark) !important; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 10; }
+  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+  @media (max-width: 960px) {
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--purple-dark); padding: 1.5rem; gap: 0; align-items: flex-start; overflow-y: auto; }
+    .nav-links.open > li { width: 100%; }
+    .nav-links.open > li > a { height: auto; padding: 12px 0; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); width: 100%; }
+    .nav-dropdown { position: static; opacity: 1; visibility: visible; transform: none; border: none; border-radius: 0; box-shadow: none; background: rgba(255,255,255,0.03); padding: 0; min-width: auto; border-left: 2px solid rgba(117,230,218,0.3); margin: 0 0 8px 12px; }
+    .nav-dropdown a { font-size: 0.85rem; padding: 9px 16px; }
+    .nav-cta-btn { margin: 1rem 0 0; width: 100%; justify-content: center; padding: 12px !important; }
+    .nav-arrow { display: none; }
+  }
+
+  /* POST HEADER */
+  #post-header { background: var(--purple-dark); padding: 120px 0 72px; position: relative; overflow: hidden; }
+  .post-header-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 50% 60% at 80% 50%, rgba(27,120,149,0.25) 0%, transparent 60%); }
+  .post-header-dots { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 36px 36px; }
+  .post-header-inner { position: relative; z-index: 2; max-width: var(--content-width); margin: 0 auto; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 1.5rem; font-size: 0.82rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.45); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--mint); }
+  .breadcrumb span { color: rgba(255,255,255,0.25); }
+  .breadcrumb-current { color: rgba(255,255,255,0.65); }
+  .post-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .post-cat-badge { font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(117,230,218,0.15); color: var(--mint); padding: 4px 14px; border-radius: 100px; border: 1px solid rgba(117,230,218,0.25); }
+  .post-date { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+  .post-read-time { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+  .post-title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 1.25rem; letter-spacing: -0.01em; }
+  .post-subtitle { font-size: 1.1rem; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 2rem; }
+  .post-author-row { display: flex; align-items: center; gap: 14px; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
+  .post-author-name { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: var(--white); }
+  .post-author-title { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+
+  /* POST BODY */
+  #post-body { padding: 72px 0 88px; }
+  .post-layout { display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .post-content { max-width: var(--content-width); }
+
+  /* ARTICLE TYPOGRAPHY */
+  .article-body h2 { font-size: 1.6rem; color: var(--gray-900); margin: 2.5rem 0 1rem; padding-top: 0.5rem; }
+  .article-body h3 { font-size: 1.2rem; color: var(--gray-900); margin: 2rem 0 0.75rem; }
+  .article-body p { font-size: 1rem; line-height: 1.85; color: var(--gray-700); margin-bottom: 1.25rem; }
+  .article-body p:last-child { margin-bottom: 0; }
+  .article-body ul, .article-body ol { margin: 1rem 0 1.25rem 1.5rem; }
+  .article-body li { font-size: 1rem; line-height: 1.75; color: var(--gray-700); margin-bottom: 0.5rem; }
+  .article-body strong { color: var(--gray-900); font-weight: 700; }
+  .article-body em { font-style: italic; }
+  .article-body a { color: var(--teal); border-bottom: 1px solid rgba(27,120,149,0.3); transition: border-color 0.2s; }
+  .article-body a:hover { border-color: var(--teal); }
+
+  /* PULL QUOTE */
+  .pull-quote { border-left: 4px solid var(--mint); background: var(--off-white); padding: 24px 28px; margin: 2rem 0; border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
+  .pull-quote p { font-size: 1.1rem !important; font-style: italic; color: var(--gray-900) !important; line-height: 1.7 !important; margin: 0 !important; }
+
+  /* CALLOUT BOX */
+  .callout { background: var(--sky); border-radius: var(--radius-lg); padding: 24px 28px; margin: 2rem 0; display: flex; gap: 16px; align-items: flex-start; }
+  .callout-icon { width: 36px; height: 36px; background: var(--purple-dark); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 3px; }
+  .callout-icon svg { width: 18px; height: 18px; color: var(--mint); }
+  .callout p { font-size: 0.93rem !important; color: var(--purple-dark) !important; margin: 0 !important; line-height: 1.65 !important; }
+  .callout strong { color: var(--purple-dark) !important; }
+
+  /* SEQUENCE TABLE */
+  .sequence-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.93rem; }
+  .sequence-table th { background: var(--purple-dark); color: var(--mint); font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 16px; text-align: left; }
+  .sequence-table td { padding: 11px 16px; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); vertical-align: top; line-height: 1.55; }
+  .sequence-table tr:last-child td { border-bottom: none; }
+  .sequence-table tr:nth-child(even) td { background: var(--off-white); }
+  .sequence-table td:first-child { font-family: var(--font-display); font-weight: 700; font-size: 0.82rem; color: var(--teal); white-space: nowrap; }
+
+  /* POST DIVIDER */
+  .post-divider { height: 1px; background: var(--gray-200); margin: 2.5rem 0; }
+
+  /* TAGS */
+  .post-tags { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 2rem 0 0; }
+  .post-tags-label { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500); }
+  .post-tag { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; padding: 5px 14px; border-radius: 100px; border: 1px solid var(--gray-200); color: var(--gray-700); background: var(--off-white); }
+
+  /* AUTHOR BIO */
+  .author-bio { background: var(--off-white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 32px; margin-top: 3rem; display: flex; gap: 24px; align-items: flex-start; }
+  .author-bio-avatar { width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0; overflow: hidden; }
+  .author-bio h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 4px; }
+  .author-bio-title { font-size: 0.82rem; color: var(--teal); font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.75rem; }
+  .author-bio p { font-size: 0.9rem !important; color: var(--gray-700) !important; line-height: 1.7 !important; margin-bottom: 1rem !important; }
+
+  /* RELATED POSTS */
+  .related-posts { margin-top: 3rem; }
+  .related-posts h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--gray-200); }
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .related-card { border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 20px; transition: all 0.3s; }
+  .related-card:hover { box-shadow: var(--shadow); border-color: var(--teal-light); }
+  .related-cat { font-family: var(--font-display); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; display: block; }
+  .related-card h4 { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: var(--gray-900); line-height: 1.3; margin-bottom: 8px; transition: color 0.2s; }
+  .related-card:hover h4 { color: var(--teal); }
+  .related-card p { font-size: 0.82rem !important; color: var(--gray-500) !important; line-height: 1.55 !important; margin: 0 !important; }
+
+  /* STICKY SIDEBAR */
+  .post-sidebar { position: sticky; top: 88px; display: grid; gap: 24px; }
+  .sidebar-widget { background: var(--off-white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 24px; }
+  .sidebar-widget h4 { font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; color: var(--gray-900); margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--gray-200); }
+  .toc-list { list-style: none; display: grid; gap: 8px; }
+  .toc-list li a { font-size: 0.85rem; color: var(--gray-700); display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; transition: color 0.2s; }
+  .toc-list li a:hover { color: var(--teal); }
+  .toc-list li a::before { content: ''; width: 4px; height: 4px; background: var(--gray-300); border-radius: 50%; flex-shrink: 0; margin-top: 8px; }
+  .cta-widget { background: var(--purple-dark); border-color: transparent; }
+  .cta-widget h4 { color: var(--white); border-color: rgba(255,255,255,0.1); }
+  .cta-widget p { font-size: 0.87rem !important; color: rgba(255,255,255,0.6) !important; line-height: 1.65 !important; margin-bottom: 1rem !important; }
+
+  /* NEXT/PREV */
+  #next-prev { background: var(--gray-100); padding: 48px 0; border-top: 1px solid var(--gray-200); }
+  .next-prev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .next-prev-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 24px; transition: all 0.3s; }
+  .next-prev-card:hover { box-shadow: var(--shadow); border-color: var(--teal-light); }
+  .next-prev-label { font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-500); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .next-prev-label svg { width: 14px; height: 14px; }
+  .next-prev-card h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; color: var(--gray-900); line-height: 1.3; transition: color 0.2s; }
+  .next-prev-card:hover h4 { color: var(--teal); }
+  .next-right { text-align: right; }
+  .next-right .next-prev-label { justify-content: flex-end; }
+
+  /* FOOTER */
+  footer { background: var(--purple-dark); padding: 48px 0 28px; }
+  .footer-nav { display: flex; gap: 2rem; margin-bottom: 32px; flex-wrap: wrap; }
+  .footer-nav a { font-family: var(--font-display); font-size: 0.85rem; color: rgba(255,255,255,0.55); font-weight: 700; letter-spacing: 0.04em; transition: color 0.2s; }
+  .footer-nav a:hover { color: var(--mint); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .footer-bottom p { font-size: 0.82rem; color: rgba(255,255,255,0.3); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+  .footer-links a:hover { color: var(--mint); }
+
+  @media (max-width: 900px) {
+    .post-layout { grid-template-columns: 1fr; padding: 0 24px; }
+    .post-sidebar { position: static; }
+    .related-grid { grid-template-columns: 1fr; }
+    .next-prev-grid { grid-template-columns: 1fr; }
+    .sequence-table { font-size: 0.85rem; }
+  }
+  @media (max-width: 600px) {
+    .author-bio { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><img src="/images/logo-light.png" alt="CSM Synergy"></a>
+    <ul class="nav-links" id="navLinks">
+      <li>
+        <a href="/streamlined-construction-system">
+          Systems
+          <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-label">Systems</div>
+          <a href="/streamlined-construction-system">Streamlined Construction System</a>
+          <a href="/synergy-crm">Synergy CRM</a>
+          <a href="/build-bridge">Build Bridge™</a>
+        </div>
+      </li>
+      <li>
+        <a href="/als-framework">
+          Processes
+          <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-label">Processes</div>
+          <a href="/als-framework">ALS Framework™</a>
+          <a href="/als-framework#programs">ALS Synergy Circle™</a>
+          <a href="https://als.csmsynergy.com/als-sales-mastery-bootcamp" target="_blank">Shed Sales Bootcamp</a>
+        </div>
+      </li>
+      <li>
+        <a href="/synergy-leadership-circle">
+          People
+          <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-label">People</div>
+          <a href="/synergy-leadership-circle">Synergy Leadership Circle™</a>
+          <a href="/about">About Carolyn</a>
+        </div>
+      </li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/brainstorm-session" class="nav-cta-btn">Book a Call</a></li>
+    </ul>
+    <div class="nav-hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- POST HEADER -->
+<section id="post-header">
+  <div class="post-header-bg"></div>
+  <div class="post-header-dots"></div>
+  <div class="container">
+    <div class="post-header-inner">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/blog">Blog</a>
+        <span>/</span>
+        <span class="breadcrumb-current">Shed Sales Follow-Up</span>
+      </div>
+      <div class="post-meta">
+        <span class="post-cat-badge">Sales</span>
+        <span class="post-date">January 2025</span>
+        <span class="post-read-time">5 min read</span>
+      </div>
+      <h1 class="post-title">The Follow-Up Formula: How to Stay in Front of Shed Buyers Without Being Annoying</h1>
+      <p class="post-subtitle">Most shed salespeople either follow up too aggressively and push the customer away, or not at all and lose the deal to whoever called second. Here's the cadence that keeps you top of mind without burning the relationship.</p>
+      <div class="post-author-row">
+        <div style="width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;"><img src="/images/carolyn-1.png" alt="Carolyn Miller" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+        <div>
+          <div class="post-author-name">Carolyn Miller</div>
+          <div class="post-author-title">Founder, CSM Synergy · $150M+ in Construction Sales</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POST BODY -->
+<section id="post-body">
+  <div class="post-layout">
+    <article class="post-content">
+      <div class="article-body">
+
+        <p>Shed sales has a follow-up problem — and it runs in both directions.</p>
+
+        <p>On one end, you have the salesperson who calls twice a day for a week after someone walks the lot. By day three, the customer stops picking up. By day five, they've told their neighbor to avoid your dealership. That's not follow-up — that's pressure, and buyers feel the difference immediately.</p>
+
+        <p>On the other end, you have the salesperson who sends one quote, waits, and takes silence as rejection. The customer buys from a competitor three weeks later — not because the competitor had a better price or a better building, but because someone kept showing up and your rep didn't.</p>
+
+        <p>The truth is that most shed buyers don't decide immediately. They're thinking about financing, talking to a spouse, waiting on a permit question, or just sitting with a big purchase the way normal people do. Your job during that window is to stay present, stay helpful, and stay out of the way of the decision — without disappearing.</p>
+
+        <h2 id="buyer-timeline">Understanding the Shed Buyer Timeline</h2>
+
+        <p>Before you can design a follow-up sequence, you need to understand how shed buyers actually make decisions. Most are not impulse buyers. The average shed purchase — especially anything over $5,000 — involves:</p>
+
+        <ul>
+          <li>A research phase where they visit multiple dealers, look online, and compare quotes</li>
+          <li>A conversation phase where they talk it over with a spouse or family member</li>
+          <li>A waiting phase where they're confirming their budget, checking on permits, or planning the site</li>
+          <li>A decision phase — which often happens quietly, with very little warning</li>
+        </ul>
+
+        <p>This process can take anywhere from 48 hours to 8 weeks. The salesperson who assumes silence means "no" is walking away from a huge portion of their potential revenue. The salesperson who understands that silence usually means "not yet" keeps showing up — thoughtfully — and earns the sale when the buyer is ready.</p>
+
+        <div class="pull-quote">
+          <p>"The sale rarely goes to the best builder or the lowest price. It goes to whoever was still standing — still present, still helpful — when the customer finally decided to buy."</p>
+        </div>
+
+        <h2 id="the-sequence">The Follow-Up Sequence That Works</h2>
+
+        <p>Here is a proven follow-up cadence for shed sales leads. The goal is consistent, value-added contact — not repeated asks for the sale.</p>
+
+        <table class="sequence-table">
+          <thead>
+            <tr>
+              <th>Timing</th>
+              <th>Channel</th>
+              <th>What to Say</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Within 1 hour</td>
+              <td>Text</td>
+              <td>"Hey [name], great talking with you today. I'm attaching your quote — reach out anytime if you have questions. — [your name]"</td>
+            </tr>
+            <tr>
+              <td>Day 2</td>
+              <td>Text or call</td>
+              <td>Quick check-in. Did they receive the quote? Any questions on sizing, features, or delivery? Keep it short and helpful.</td>
+            </tr>
+            <tr>
+              <td>Day 5</td>
+              <td>Text</td>
+              <td>Add value — a photo of a completed build similar to what they're considering, a note about current lead times, or a financing option they may not have seen.</td>
+            </tr>
+            <tr>
+              <td>Day 10</td>
+              <td>Call</td>
+              <td>"Just wanted to check in — still thinking about the building? No rush at all. I just want to make sure I answer anything that comes up." Leave a voicemail if no answer.</td>
+            </tr>
+            <tr>
+              <td>Day 21</td>
+              <td>Text</td>
+              <td>A soft re-engagement: "Hey [name] — we just finished a [similar size] building for a customer over in [nearby area]. Came out really well. Happy to share a few photos if helpful."</td>
+            </tr>
+            <tr>
+              <td>Day 45</td>
+              <td>Text or email</td>
+              <td>A long-game touch: seasonal content, a limited promotion, or simply: "Still here if the timing gets right — hope spring is treating you well."</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Notice what's not in this sequence: pressure, urgency language, and repeated asks to buy. Every touch is either helpful, informative, or warm — never desperate.</p>
+
+        <h2 id="what-to-say">What to Say (and What Not to Say)</h2>
+
+        <p>The biggest mistake in shed sales follow-up is making every message about your need to close the deal. Buyers can feel that. It makes them avoid your calls and delay their decision because interacting with you feels uncomfortable.</p>
+
+        <p>Effective follow-up always leads with something for the customer:</p>
+
+        <ul>
+          <li><strong>A relevant photo.</strong> "We just finished a 12x20 with the loft option — thought of you. Here's how it turned out."</li>
+          <li><strong>A timing note.</strong> "Heads up — our lead time for spring delivery books out fast. Wanted to make sure you had that info."</li>
+          <li><strong>An answer to a question they didn't ask yet.</strong> "A lot of customers in your area ask about permits — here's what the county generally requires for a structure this size."</li>
+          <li><strong>A financing reminder.</strong> "Wanted to flag that our rent-to-own option works out to around $X/month for the building you were looking at — sometimes that makes the math easier."</li>
+        </ul>
+
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <p><strong>Automate the cadence, personalize the content.</strong> In GoHighLevel, you can build this entire sequence as an automated workflow — texts go out on schedule without anyone having to remember. But the messages themselves should feel personal. Use the customer's name. Reference the specific building they looked at. A templated message that feels human will always outperform a robotic one.</p>
+        </div>
+
+        <h2 id="when-to-stop">When to Stop Following Up</h2>
+
+        <p>Follow-up isn't forever. At some point, continued contact becomes noise — and it can damage your reputation with a customer who might buy in the future or refer someone they know.</p>
+
+        <p>A few signals that it's time to wind down:</p>
+
+        <ul>
+          <li>They've explicitly said no or asked you to stop contacting them — stop immediately</li>
+          <li>They've gone completely silent for 60+ days with no engagement at any touchpoint</li>
+          <li>You've confirmed through a third-party that they purchased elsewhere</li>
+        </ul>
+
+        <p>Even when you wind down active follow-up, move them to a long-term nurture list. A quarterly email with a project spotlight, a seasonal offer, or helpful content keeps the door open without being intrusive. Shed buyers come back. Their neighbors buy. Referrals are real — and they come from people who liked you even when they didn't buy.</p>
+
+        <p>If you want to build this follow-up system inside your CRM so it runs automatically — right cadence, right message, right timing — <a href="/brainstorm-session">book a free Brainstorm Session</a> and we'll walk through exactly how to set it up.</p>
+
+      </div>
+
+      <div class="post-divider"></div>
+
+      <div class="post-tags">
+        <span class="post-tags-label">Topics:</span>
+        <span class="post-tag">Shed Sales</span>
+        <span class="post-tag">Follow-Up</span>
+        <span class="post-tag">Sales Process</span>
+        <span class="post-tag">Automation</span>
+        <span class="post-tag">GoHighLevel</span>
+        <span class="post-tag">CRM</span>
+      </div>
+
+      <!-- AUTHOR BIO -->
+      <div class="author-bio">
+        <div class="author-bio-avatar"><img src="/images/carolyn-5.png" alt="Carolyn Miller" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+        <div>
+          <h4>Carolyn Miller</h4>
+          <div class="author-bio-title">Founder, CSM Synergy</div>
+          <p>Carolyn has driven more than $150 million in construction sales over an 18-year career — starting in shed sales and growing into post frame buildings and barndominiums. She created the ALS Framework and now helps construction companies across the US and Canada train their teams and build the systems that support consistent growth.</p>
+          <a href="/about" class="btn btn-outline-dark" style="font-size:0.82rem;padding:9px 20px;">Read Full Bio
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- RELATED POSTS -->
+      <div class="related-posts">
+        <h3>Related Articles</h3>
+        <div class="related-grid">
+          <a href="/blog/why-construction-salespeople-lose-deals" class="related-card">
+            <span class="related-cat">Sales</span>
+            <h4>Why Construction Salespeople Lose Deals — And It's Not the Price</h4>
+            <p>6 min read · March 2025</p>
+          </a>
+          <a href="/blog/crm-costing-you-deals" class="related-card">
+            <span class="related-cat">Systems</span>
+            <h4>5 Signs Your Construction CRM Is Costing You Deals</h4>
+            <p>8 min read · February 2025</p>
+          </a>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- STICKY SIDEBAR -->
+    <aside class="post-sidebar">
+
+      <div class="sidebar-widget">
+        <h4>In This Article</h4>
+        <ul class="toc-list">
+          <li><a href="#buyer-timeline">Understanding the Buyer Timeline</a></li>
+          <li><a href="#the-sequence">The Follow-Up Sequence</a></li>
+          <li><a href="#what-to-say">What to Say (and What Not to)</a></li>
+          <li><a href="#when-to-stop">When to Stop Following Up</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-widget cta-widget">
+        <h4>Automate Your Follow-Up</h4>
+        <p>Set up this exact sequence inside GoHighLevel so it runs without anyone having to remember.</p>
+        <a href="/streamlined-construction-system" class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.85rem;">
+          See the System
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+      <div class="sidebar-widget">
+        <h4>Book a Free Call</h4>
+        <p style="font-size:0.87rem;color:var(--gray-500);margin-bottom:1rem;line-height:1.6;">30 minutes with Carolyn. No pitch. Just a real conversation about your business.</p>
+        <a href="/brainstorm-session" class="btn btn-teal" style="width:100%;justify-content:center;font-size:0.85rem;">
+          Book Free Session
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+    </aside>
+  </div>
+</section>
+
+<!-- NEXT / PREV -->
+<section id="next-prev">
+  <div class="container">
+    <div class="next-prev-grid">
+      <a href="/blog/post-frame-local-seo" class="next-prev-card">
+        <div class="next-prev-label">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          Previous Article
+        </div>
+        <h4>How Post Frame Builders Can Dominate Local Search in Their Market</h4>
+      </a>
+      <a href="/blog/smartbuild-ghl-integration" class="next-prev-card next-right">
+        <div class="next-prev-label">
+          Next Article
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </div>
+        <h4>SmartBuild and GoHighLevel: Why These Two Tools Are Better Together</h4>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-logo"><img src="/images/logo-light.png" alt="CSM Synergy" style="height:52px;width:auto;margin-bottom:0.5rem;"></div>
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/streamlined-construction-system">The System</a>
+      <a href="/build-bridge">Build Bridge™</a>
+      <a href="/als-framework">ALS Framework</a>
+      <a href="/synergy-leadership-circle">The Synergy Leadership Circle™</a>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06);margin-top:32px;padding-top:32px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:680px;">
+        <div>
+          <p style="font-family:var(--font-display);font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mint);margin-bottom:10px;">CSM:</p>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;"><strong style="color:rgba(255,255,255,0.7);">C</strong>reate a Clear Plan,<br><strong style="color:rgba(255,255,255,0.7);">S</strong>uccessfully Implement,<br><strong style="color:rgba(255,255,255,0.7);">M</strong>aster your Business!<br><em style="color:rgba(255,255,255,0.3);font-size:0.82rem;">~Carolyn Sue Miller</em></p>
+        </div>
+        <div>
+          <p style="font-family:var(--font-display);font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--mint);margin-bottom:10px;">Synergy:</p>
+          <p style="font-size:0.88rem;color:rgba(255,255,255,0.45);line-height:1.75;margin:0;">When two or more people team up, their combined effort creates something even greater than what they could do by themselves.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 CSM Synergy &amp; Carolyn Miller. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-and-conditions">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+</script>
+</body>
+</html>

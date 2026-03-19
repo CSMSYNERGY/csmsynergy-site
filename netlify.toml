@@ -77,6 +77,11 @@
   status = 200
 
 [[redirects]]
+  from = "/blog/shed-sales-follow-up"
+  to = "/blog-shed-sales-follow-up.html"
+  status = 200
+
+[[redirects]]
   from = "/ghl-phone-dialer-privacy"
   to = "/ghl-phone-dialer-privacy.html"
   status = 200
