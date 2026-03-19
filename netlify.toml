@@ -67,6 +67,11 @@
   status = 200
 
 [[redirects]]
+  from = "/blog/stop-being-the-bottleneck"
+  to = "/blog-stop-being-the-bottleneck.html"
+  status = 200
+
+[[redirects]]
   from = "/ghl-phone-dialer-privacy"
   to = "/ghl-phone-dialer-privacy.html"
   status = 200
