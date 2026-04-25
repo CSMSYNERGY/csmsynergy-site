@@ -17,11 +17,11 @@
 <style>
   :root {
     --purple: #3d3672;
-    --purple-dark: #2a2450;
-    --purple-light: #5a5295;
+    --purple-dark: #3d3672;
+    --purple-light: #3d3672;
     --teal: #1b7895;
-    --teal-dark: #145e76;
-    --teal-light: #2498be;
+    --teal-dark: #1b7895;
+    --teal-light: #1b7895;
     --mint: #75e6da;
     --sky: #dbeaff;
     --white: #ffffff;
@@ -50,7 +50,7 @@
   p { color: var(--gray-700); }
   .eyebrow { font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mint); display: block; margin-bottom: 0.75rem; }
   .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-  section { padding: 88px 0; }
+  section { padding: 56px 0; }
 
   .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; letter-spacing: 0.03em; border-radius: var(--radius); cursor: pointer; transition: all 0.2s ease; border: 2px solid transparent; }
   .btn-primary { background: var(--mint); color: var(--purple-dark); border-color: var(--mint); }
@@ -211,7 +211,7 @@
   .philosophy-header h2 { color: var(--white); }
   .philosophy-header p { color: rgba(255,255,255,0.6); margin-top: 1rem; }
   .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.06); border-radius: var(--radius-lg); overflow: hidden; }
-  .value-card { background: rgba(42,36,80,0.85); padding: 36px 28px; transition: background 0.3s; }
+  .value-card { background: rgba(61,54,114,0.85); padding: 36px 28px; transition: background 0.3s; }
   .value-card:hover { background: rgba(27,120,149,0.3); }
   .value-icon { width: 48px; height: 48px; background: rgba(117,230,218,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
   .value-icon svg { width: 24px; height: 24px; color: var(--mint); }
@@ -267,7 +267,7 @@
   .t-company { font-size: 0.8rem; color: var(--gray-500); }
 
   /* CTA */
-  #cta { background: var(--purple); padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
+  #cta { background: var(--teal); padding: 56px 0; text-align: center; position: relative; overflow: hidden; }
   #cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 80% at 50% 0%, rgba(117,230,218,0.12) 0%, transparent 60%); }
   .cta-inner { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
   #cta h2 { color: var(--white); margin-bottom: 1rem; }
@@ -350,7 +350,7 @@
     .footer-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 600px) {
-    section { padding: 60px 0; }
+    section { padding: 44px 0; }
     .stats-bar { grid-template-columns: 1fr 1fr; }
     .hero-credentials { gap: 8px; }
     .footer-grid { grid-template-columns: 1fr; }
