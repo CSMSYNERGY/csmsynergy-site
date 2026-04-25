@@ -22,6 +22,11 @@
   status = 200
 
 [[redirects]]
+  from = "/synergy-crm"
+  to = "/synergy-crm.html"
+  status = 200
+
+[[redirects]]
   from = "/build-bridge"
   to = "/build-bridge.html"
   status = 200

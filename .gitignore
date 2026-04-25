@@ -3,3 +3,4 @@ Thumbs.db
 *.log
 .netlify/
 .claude/
+dev_server.py
