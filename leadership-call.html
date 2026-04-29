@@ -149,13 +149,11 @@
   .hero-title-sub {
     display: block;
     margin-top: 14px;
-    text-transform: none;
-    font-family: var(--font-body);
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
     font-weight: 400;
-    font-style: italic;
-    letter-spacing: 0;
-    color: rgba(255,255,255,0.85);
+    letter-spacing: -0.01em;
+    color: rgba(255,255,255,0.92);
   }
   .hero-inner { position: relative; z-index: 2; max-width: 560px; }
 
@@ -245,7 +243,7 @@
   @media (max-width: 900px) {
     .circle-graphic { display: none; }
   }
-  .hero-title { color: var(--white); margin-bottom: 0.5rem; text-transform: uppercase; line-height: 1.05; letter-spacing: -0.01em; font-weight: 700; }
+  .hero-title { color: var(--white); margin-bottom: 0.5rem; line-height: 1.1; letter-spacing: -0.01em; font-weight: 700; }
   .hero-title em { font-style: normal; color: var(--mint); border-bottom: 3px solid var(--mint); padding-bottom: 4px; }
   .hero-tagline { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--white); margin: 1.25rem 0 1.5rem; }
   .hero-tagline .accent { color: var(--mint); }
@@ -434,7 +432,10 @@
     overflow: hidden;
   }
   #waitlist::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 50% 0%, rgba(117,230,218,0.15) 0%, transparent 60%); }
-  .waitlist-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; text-align: center; }
+  .waitlist-inner { position: relative; z-index: 2; max-width: 920px; margin: 0 auto; text-align: center; }
+  .waitlist-inner > .eyebrow,
+  .waitlist-inner > h2,
+  .waitlist-inner > p { max-width: 640px; margin-left: auto; margin-right: auto; }
   .waitlist-inner .eyebrow { color: var(--mint); }
   .waitlist-inner h2 { color: var(--white); margin-bottom: 1rem; }
   .waitlist-inner p { color: rgba(255,255,255,0.68); font-size: 1rem; margin-bottom: 2.5rem; line-height: 1.8; }
@@ -642,12 +643,12 @@
   <div class="hero-grid"></div>
   <div class="container">
     <div class="hero-headline fade-up">
-      <h1 class="hero-title">You Started Your Business For <em>Freedom</em>.<span class="hero-title-sub">Now you find yourself wearing all the hats and more stressed.</span></h1>
+      <h1 class="hero-title">You Started Your Business For <em>Freedom</em>.<span class="hero-title-sub">Now It Feels Like the Business Owns You.</span></h1>
     </div>
     <div class="hero-inner fade-up">
-      <p class="hero-tagline"><span class="accent">Solving</span> Real Problems.</p>
-      <p class="hero-sub">You built this business to be your own boss. To work on your own terms. Years later, you're handling sales, ops, HR, finance, marketing, and the people problems no one warned you about.</p>
-      <p class="hero-sub">The <strong style="color:var(--mint);font-weight:700;">Synergy Leadership Circle™</strong> is a small group of construction founders trading isolation for accountability, and stress for a room of leaders who actually get it.</p>
+      <p class="hero-tagline">FOR CONSTRUCTION FOUNDERS</p>
+      <p class="hero-sub">You built this business to be your own boss. To work on your own terms. Years later, you're handling sales, ops, HR, finance, marketing. Plus the people problems no one warned you about.</p>
+      <p class="hero-sub">The <strong style="color:var(--mint);font-weight:700;">Synergy Leadership Circle™</strong> is a small group of construction founders trading isolation for accountability, and stress for support from leaders who actually get it.</p>
 <div class="hero-ctas">
         <a href="#waitlist" class="btn btn-primary btn-lg">
           Join the Waitlist
