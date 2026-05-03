@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Synergy Leadership Circle™ | CSM Synergy</title>
-<meta name="description" content="The Synergy Leadership Circle™ is a biweekly group call built exclusively for construction business owners — post frame builders, shed companies, and barndominium builders. When leaders come together, the result is always greater than any one of them alone. Join the waitlist.">
-<meta name="keywords" content="construction business owner leadership, synergy leadership circle, construction leadership group, post frame builder leadership, shed company owner coaching, barndominium business coach, construction CEO coaching, Carolyn Miller leadership">
-<meta property="og:title" content="The Synergy Leadership Circle™ | CSM Synergy">
-<meta property="og:description" content="A biweekly group call for construction business owners. Bring your real issues, collaborate on real solutions, set real goals, and hold each other accountable. Join the waitlist.">
-<meta property="og:url" content="https://www.csmsynergy.com/synergy-leadership-circle">
+<title>Construction Founders Mastermind™ | CSM Synergy</title>
+<meta name="description" content="The Construction Founders Mastermind™ is a biweekly group built exclusively for construction business owners — post frame builders, shed companies, and barndominium builders. Trade isolation for accountability and stress for support from leaders who actually get it. Join the waitlist.">
+<meta name="keywords" content="construction founders mastermind, construction business owner mastermind, construction leadership group, post frame builder mastermind, shed company owner coaching, barndominium business coach, construction CEO coaching, Carolyn Miller mastermind">
+<meta property="og:title" content="Construction Founders Mastermind™ | CSM Synergy">
+<meta property="og:description" content="A biweekly mastermind group for construction business owners. Bring your real issues, collaborate on real solutions, set real goals, and hold each other accountable. Join the waitlist.">
+<meta property="og:url" content="https://www.csmsynergy.com/construction-founders-mastermind">
 <link rel="icon" type="image/png" href="/images/favicon.png">
-<link rel="canonical" href="https://www.csmsynergy.com/synergy-leadership-circle">
+<link rel="canonical" href="https://www.csmsynergy.com/construction-founders-mastermind">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -139,7 +139,7 @@
   #hero::before {
     content: '';
     position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(61,54,114,0.9) 0%, rgba(27,120,149,0.88) 100%);
+    background: rgba(219,234,255,0.85);
     pointer-events: none;
     z-index: 1;
   }
@@ -153,7 +153,7 @@
     font-size: clamp(1.7rem, 3vw, 2.6rem);
     font-weight: 400;
     letter-spacing: -0.01em;
-    color: rgba(255,255,255,0.92);
+    color: rgba(61,54,114,0.78);
   }
   .hero-inner { position: relative; z-index: 2; max-width: 560px; }
 
@@ -170,7 +170,7 @@
   }
   .circle-orbit {
     position: absolute; inset: 0;
-    border: 1.5px solid rgba(117,230,218,0.32);
+    border: 1.5px solid rgba(27,120,149,0.45);
     border-radius: 50%;
   }
   .circle-center {
@@ -217,8 +217,7 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--white);
-    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+    color: var(--purple);
     line-height: 1.3;
     width: 145px;
   }
@@ -243,11 +242,11 @@
   @media (max-width: 900px) {
     .circle-graphic { display: none; }
   }
-  .hero-title { color: var(--white); margin-bottom: 0.5rem; line-height: 1.1; letter-spacing: -0.01em; font-weight: 700; }
-  .hero-title em { font-style: normal; color: var(--mint); border-bottom: 3px solid var(--mint); padding-bottom: 4px; }
-  .hero-tagline { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--white); margin: 1.25rem 0 1.5rem; }
+  .hero-title { color: var(--purple); margin-bottom: 0.5rem; line-height: 1.1; letter-spacing: -0.01em; font-weight: 700; }
+  .hero-title em { font-style: normal; color: var(--teal); border-bottom: 3px solid var(--mint); padding-bottom: 4px; }
+  .hero-tagline { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--teal); margin: 1.25rem 0 1.5rem; letter-spacing: 0.06em; }
   .hero-tagline .accent { color: var(--mint); }
-  .hero-sub { font-size: 0.97rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin: 0 0 1rem; max-width: 100%; }
+  .hero-sub { font-size: 0.97rem; color: var(--gray-900); line-height: 1.7; margin: 0 0 1rem; max-width: 100%; }
   .hat-strip { display: flex; gap: 1.25rem; margin: 1.5rem 0 1.75rem; flex-wrap: wrap; }
   .hat-item { display: flex; flex-direction: column; align-items: center; gap: 6px; color: rgba(255,255,255,0.85); font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; min-width: 56px; }
   .hat-item svg { width: 26px; height: 26px; color: var(--mint); flex-shrink: 0; }
@@ -260,31 +259,20 @@
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
   .manifesto-marquee {
-    width: 100%;
-    overflow: hidden;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
   }
   .manifesto-track {
-    display: inline-flex;
-    white-space: nowrap;
-    animation: manifesto-scroll 60s linear infinite;
     font-family: var(--font-display);
     font-size: 0.95rem;
     color: rgba(255,255,255,0.88);
     font-style: italic;
     font-weight: 400;
+    line-height: 1.6;
   }
-  .manifesto-track > span { display: inline-block; padding-right: 56px; }
   .manifesto-track .accent { color: var(--mint); font-style: normal; font-weight: 700; }
-  .manifesto-track .sep { color: var(--mint); padding-right: 56px; font-style: normal; }
-  @keyframes manifesto-scroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .manifesto-track { animation: none; }
-  }
   .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
   @media (max-width: 900px) {
     #hero { background-position: center; min-height: auto; padding: 48px 0; }
@@ -614,13 +602,13 @@
         </div>
       </li>
       <li>
-        <a href="/synergy-leadership-circle">
+        <a href="/construction-founders-mastermind">
           People
           <svg class="nav-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
         </a>
         <div class="nav-dropdown">
           <div class="nav-dropdown-label">People</div>
-          <a href="/synergy-leadership-circle">Synergy Leadership Circle™</a>
+          <a href="/construction-founders-mastermind">Construction Founders Mastermind</a>
           <a href="/about">About Carolyn</a>
         </div>
       </li>
@@ -648,13 +636,13 @@
     <div class="hero-inner fade-up">
       <p class="hero-tagline">FOR CONSTRUCTION FOUNDERS</p>
       <p class="hero-sub">You built this business to be your own boss. To work on your own terms. Years later, you're handling sales, ops, HR, finance, marketing. Plus the people problems no one warned you about.</p>
-      <p class="hero-sub">The <strong style="color:var(--mint);font-weight:700;">Synergy Leadership Circle™</strong> is a small group of construction founders trading isolation for accountability, and stress for support from leaders who actually get it.</p>
+      <p class="hero-sub">The <strong style="color:var(--teal);font-weight:700;">Construction Founders Mastermind™</strong> is a small group trading isolation for accountability, and stress for support from leaders who actually get it.</p>
 <div class="hero-ctas">
         <a href="#waitlist" class="btn btn-primary btn-lg">
           Join the Waitlist
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
-        <a href="#whatyouget" class="btn btn-outline">See What's Inside</a>
+        <a href="#whatyouget" class="btn btn-ghost">See What's Inside</a>
       </div>
     </div>
   </div>
@@ -663,7 +651,7 @@
     <div class="circle-center">
       <span class="circle-center-line">The Power</span>
       <span class="circle-center-line">Of The</span>
-      <span class="circle-center-line">Circle</span>
+      <span class="circle-center-line">Mastermind</span>
     </div>
     <div class="circle-dot top"></div>
     <div class="circle-dot right"></div>
@@ -677,12 +665,7 @@
 <!-- MANIFESTO STRIP -->
 <section id="manifesto-strip">
   <div class="manifesto-marquee">
-    <div class="manifesto-track">
-      <span>You are a leader. And when leaders come together — sharing real problems, holding each other accountable, and growing intentionally — the result is always greater than any one of them could create alone. <span class="accent">That's the power of the Circle.</span></span>
-      <span class="sep">●</span>
-      <span aria-hidden="true">You are a leader. And when leaders come together — sharing real problems, holding each other accountable, and growing intentionally — the result is always greater than any one of them could create alone. <span class="accent">That's the power of the Circle.</span></span>
-      <span class="sep" aria-hidden="true">●</span>
-    </div>
+    <p class="manifesto-track">When leaders share real problems, hold each other accountable, and grow together — they move faster than they ever could alone. <span class="accent">That's a real mastermind.</span></p>
   </div>
 </section>
 
@@ -1047,7 +1030,7 @@
           How is this different from the ALS Synergy Circle™?
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
         </button>
-        <div class="faq-a">The ALS Synergy Circle™ is focused on the ALS Framework and runs every week — it's designed for salespeople and sales managers. The Synergy Leadership Circle™ is biweekly, exclusively for business owners, and covers issue solving, accountability, and leadership development. They complement each other perfectly but serve different people at different levels of the business.</div>
+        <div class="faq-a">The ALS Synergy Circle™ is focused on the ALS Framework and runs every week — it's designed for salespeople and sales managers. The Construction Founders Mastermind™ is biweekly, exclusively for business owners, and covers issue solving, accountability, and leadership development. They complement each other perfectly but serve different people at different levels of the business.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
@@ -1065,7 +1048,7 @@
   <div class="cta-inner fade-up">
     <span class="eyebrow" style="color:var(--mint);">Don't Wait to Lead Better</span>
     <h2>Leaders Grow Faster Together</h2>
-    <p>Join the waitlist for the Synergy Leadership Circle™ and be part of the first cohort. When leaders come together with intention, accountability, and the right guidance — the result is always greater. Seats are intentionally limited.</p>
+    <p>Join the waitlist for the Construction Founders Mastermind™ and be part of the first cohort. When leaders come together with intention, accountability, and the right guidance — they move faster than they ever could alone. Seats are intentionally limited.</p>
     <div class="cta-buttons">
       <a href="#waitlist" class="btn btn-primary btn-lg">
         Join the Waitlist
@@ -1111,7 +1094,7 @@
         <ul>
           <li><a href="/als-framework">ALS Framework™</a></li>
           <li><a href="/als-framework">ALS Synergy Circle™</a></li>
-          <li><a href="/synergy-leadership-circle">The Synergy Leadership Circle™</a></li>
+          <li><a href="/construction-founders-mastermind">Construction Founders Mastermind™</a></li>
           <li><a href="/als-framework">Shed Sales Bootcamp</a></li>
         </ul>
       </div>

@@ -32,14 +32,19 @@
   status = 200
 
 [[redirects]]
-  from = "/synergy-leadership-circle"
+  from = "/construction-founders-mastermind"
   to = "/leadership-call.html"
   status = 200
 
 [[redirects]]
+  from = "/synergy-leadership-circle"
+  to = "/construction-founders-mastermind"
+  status = 301
+
+[[redirects]]
   from = "/leadership-call"
-  to = "/leadership-call.html"
-  status = 200
+  to = "/construction-founders-mastermind"
+  status = 301
 
 [[redirects]]
   from = "/streamlined-construction-system"
