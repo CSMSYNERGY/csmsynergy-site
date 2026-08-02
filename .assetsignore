@@ -1,0 +1,13 @@
+# The asset directory is the repo root (netlify.toml used publish = "."), so
+# everything that is tooling rather than website must be excluded from upload.
+.git
+.github
+.claude
+.gitignore
+.assetsignore
+netlify.toml
+wrangler.jsonc
+dev_server.py
+node_modules
+.DS_Store
+Thumbs.db

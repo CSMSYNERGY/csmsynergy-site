@@ -1,0 +1,32 @@
+# URL rules for the CSM Synergy site.
+#
+# These mirror the site's OBSERVED live behaviour, which is not the same as a
+# literal reading of netlify.toml. Netlify serves a matching static file before
+# it applies redirect rules, so several rules in that file never fired — most
+# notably `/leadership-call -> /construction-founders-mastermind 301`, which
+# lost to leadership-call.html and returns 200 in production. Porting the config
+# verbatim would have introduced redirects that do not exist today.
+#
+# Only paths with NO file of their own need a rule here. Everything else
+# (/about, /contact, /integrations, ...) is resolved by html_handling
+# "auto-trailing-slash", which serves about.html for /about.
+#
+# Rewrite targets are deliberately EXTENSIONLESS. Pointing a 200 at
+# "/foo.html" makes html_handling normalise the .html away with a 307 back to
+# "/foo", which then re-enters this rule and loops.
+
+# No home.html exists, so this rule fires. It needed Netlify's "!" force flag
+# there; here a plain 301 is correct.
+/home                                             /                                  301
+
+# Renamed offer. No file by either name, so both rules apply.
+/synergy-leadership-circle                        /construction-founders-mastermind  301
+/construction-founders-mastermind                 /leadership-call                   200
+
+# Blog posts live as flat blog-<slug>.html files but are linked as /blog/<slug>.
+/blog/why-construction-salespeople-lose-deals     /blog-post                         200
+/blog/crm-costing-you-deals                       /blog-crm-costing-you-deals        200
+/blog/stop-being-the-bottleneck                   /blog-stop-being-the-bottleneck    200
+/blog/post-frame-local-seo                        /blog-post-frame-local-seo         200
+/blog/shed-sales-follow-up                        /blog-shed-sales-follow-up         200
+/blog/smartbuild-ghl-integration                  /blog-smartbuild-ghl-integration   200

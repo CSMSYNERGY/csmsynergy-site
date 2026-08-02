@@ -4,3 +4,6 @@ Thumbs.db
 .netlify/
 .claude/
 dev_server.py
+
+# Local wrangler state (account cache, build artifacts)
+.wrangler/

@@ -1,0 +1,28 @@
+{
+  // Cloudflare Workers config for the CSM Synergy marketing site.
+  //
+  // This is a plain static HTML site with no build step — netlify.toml used
+  // `publish = "."`, so the repo root itself is the asset directory. Everything
+  // that must NOT be published (.git, tooling, the Netlify config) is listed in
+  // `.assetsignore` rather than moved, so the repo layout stays as-is.
+  //
+  // There is no `main` entry script: this is an assets-only Worker and
+  // Cloudflare just serves the files.
+  //
+  // Response headers come from `_headers` and URL rules from `_redirects`,
+  // both ported from netlify.toml. Redirects are evaluated before headers.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "csmsynergy-site",
+  "compatibility_date": "2025-04-01",
+  "assets": {
+    "directory": ".",
+    // Serves /about from about.html, matching Netlify's pretty-URL behaviour.
+    // The explicit rules in _redirects cover the cases where the path does not
+    // match the filename (e.g. /blog/<slug> -> /blog-<slug>.html).
+    "html_handling": "auto-trailing-slash",
+    // Static brochure site, not an SPA — an unknown path must 404 rather than
+    // silently returning the homepage. "404-page" serves 404.html with a
+    // genuine 404 status, replacing Netlify's default not-found page.
+    "not_found_handling": "404-page"
+  }
+}

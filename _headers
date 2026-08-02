@@ -1,0 +1,11 @@
+# Response headers for the CSM Synergy site, ported from netlify.toml.
+#
+# Note X-Frame-Options: DENY is correct HERE — unlike the CSM Studio app, this
+# marketing site is never embedded in the GoHighLevel dashboard, so blocking all
+# framing is the right call.
+
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
