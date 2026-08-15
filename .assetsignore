@@ -7,6 +7,9 @@
 .assetsignore
 netlify.toml
 wrangler.jsonc
+# Decap CMS admin — depends on Netlify git-gateway, parked until/unless it is
+# migrated to a GitHub-backend OAuth flow. Kept in the repo, not deployed.
+admin
 dev_server.py
 node_modules
 .DS_Store
