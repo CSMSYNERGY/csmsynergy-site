@@ -14,6 +14,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "csmsynergy-site",
   "compatibility_date": "2025-04-01",
+  // Custom domain: replaces the old DNS records that pointed at Netlify.
+  // www stays a separate zone-level 301 to the apex (matching prior behaviour).
+  "routes": [
+    { "pattern": "csmsynergy.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": ".",
     // Serves /about from about.html, matching Netlify's pretty-URL behaviour.

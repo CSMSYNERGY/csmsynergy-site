@@ -5,8 +5,9 @@
 .claude
 .gitignore
 .assetsignore
-netlify.toml
 wrangler.jsonc
+.wrangler
+DEPLOY.md
 # Decap CMS admin — depends on Netlify git-gateway, parked until/unless it is
 # migrated to a GitHub-backend OAuth flow. Kept in the repo, not deployed.
 admin
