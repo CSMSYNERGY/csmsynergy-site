@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Utility pages that add nothing to search results
+Disallow: /admin
+Disallow: /404
+
+Sitemap: https://csmsynergy.com/sitemap.xml
