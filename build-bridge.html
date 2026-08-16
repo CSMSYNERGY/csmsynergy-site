@@ -131,14 +131,10 @@
     padding: 56px 0;
   }
   .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(117,230,218,0.1);
-    border: 1px solid rgba(117,230,218,0.25);
-    padding: 6px 14px; border-radius: 100px;
+    font-family: var(--font-display);
     font-size: 0.78rem; font-weight: 700; color: var(--mint);
-    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem;
+    letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem;
   }
-  .ghl-dot { display: inline-block; width: 8px; height: 8px; background: #00d4aa; border-radius: 50%; }
   .hero-title { color: var(--white); margin-bottom: 1.5rem; }
   .hero-title em { font-style: normal; color: var(--mint); }
   .hero-desc { font-size: 1.08rem; color: rgba(255,255,255,0.68); margin-bottom: 2rem; max-width: 500px; line-height: 1.8; }
@@ -368,7 +364,7 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 3px 10px;
-    border-radius: 100px;
+    border-radius: var(--radius);
     margin-left: 8px;
     vertical-align: middle;
   }
@@ -444,7 +440,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 4px 16px;
-    border-radius: 100px;
+    border-radius: var(--radius);
     white-space: nowrap;
   }
   .plan-name { font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
@@ -630,7 +626,6 @@
     <div class="hero-inner">
       <div>
         <div class="hero-badge">
-          <span class="ghl-dot"></span>
           Available on the GHL Marketplace
         </div>
         <h1 class="hero-title">Meet Your Tools<br><em>Where They Are</em></h1>

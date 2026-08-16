@@ -81,8 +81,7 @@
   .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 55% 70% at 85% 40%, rgba(27,120,149,0.28) 0%, transparent 60%), radial-gradient(ellipse 30% 40% at 5% 85%, rgba(117,230,218,0.08) 0%, transparent 55%); }
   .hero-dots { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.035) 1px, transparent 1px); background-size: 40px 40px; }
   .hero-inner { position: relative; z-index: 2; text-align: center; max-width: 760px; margin: 0 auto; }
-  .free-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(117,230,218,0.1); border: 1px solid rgba(117,230,218,0.25); padding: 6px 18px; border-radius: 100px; font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; color: var(--mint); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
-  .free-dot { width: 6px; height: 6px; background: var(--mint); border-radius: 50%; }
+  .free-pill { display: block; font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; color: var(--mint); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; }
   .hero-inner h1 { color: var(--white); margin-bottom: 1rem; }
   .hero-inner h1 em { font-style: normal; color: var(--mint); }
   .hero-inner p { color: rgba(255,255,255,0.68); font-size: 1.05rem; line-height: 1.8; max-width: 600px; margin: 0 auto 2.5rem; }
@@ -128,7 +127,7 @@
   }
   .who-card h3 { color: var(--white); margin-bottom: 1rem; font-size: 1rem; }
   .who-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .who-tag { background: rgba(255,255,255,0.15); color: var(--white); font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; padding: 5px 14px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.2); }
+  .who-tag { background: rgba(255,255,255,0.15); color: var(--white); font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; padding: 5px 14px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.2); }
 
   .carolyn-card {
     background: var(--white);
@@ -321,7 +320,7 @@
   <div class="hero-dots"></div>
   <div class="container">
     <div class="hero-inner fade-up">
-      <div class="free-pill"><span class="free-dot"></span> 100% Free — No Obligation</div>
+      <div class="free-pill">100% Free — No Obligation</div>
       <h1>Book Your Free<br><em>Brainstorm Session</em></h1>
       <p>A 30-minute conversation with Carolyn about your business — where you are, where you want to go, and whether CSM Synergy is the right fit to help you get there. No pitch. No pressure. Just real talk.</p>
       <div class="hero-details">

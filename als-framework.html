@@ -118,7 +118,7 @@
   }
   .hero-dots { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 36px 36px; }
   .hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; padding: 56px 0; }
-  .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(117,230,218,0.1); border: 1px solid rgba(117,230,218,0.25); padding: 6px 16px; border-radius: 100px; font-size: 0.78rem; font-weight: 700; color: var(--mint); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem; font-family: var(--font-display); }
+  .hero-tag { display: block; font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; color: var(--mint); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; }
   .hero-title { color: var(--white); margin-bottom: 0.5rem; }
   .hero-title em { font-style: normal; color: var(--mint); }
   .hero-tagline { font-family: var(--font-display); font-size: clamp(1rem, 1.8vw, 1.25rem); color: rgba(255,255,255,0.45); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; }
@@ -269,7 +269,7 @@
   .program-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; color: var(--teal); letter-spacing: 0.04em; text-transform: uppercase; transition: gap 0.2s; }
   .program-card.featured .program-link { color: var(--mint); }
   .program-link:hover { gap: 10px; }
-  .new-badge { position: absolute; top: 20px; right: 20px; background: var(--mint); color: var(--purple-dark); font-family: var(--font-display); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; }
+  .new-badge { position: absolute; top: 20px; right: 20px; background: var(--mint); color: var(--purple-dark); font-family: var(--font-display); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: var(--radius); }
 
   /* WHO IT'S FOR */
   #who { background: var(--white); }
