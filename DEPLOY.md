@@ -38,5 +38,9 @@ OAuth Worker.
 
 Migrated from Netlify on 2026-08-15. `netlify.toml` was removed; `_redirects`
 intentionally mirrors the OBSERVED Netlify behavior, not a verbatim port
-(see comments in `_redirects`). The old Netlify site was left up briefly as a
-rollback fallback, then deleted.
+(see comments in `_redirects`). The old Netlify site was left up as a rollback
+fallback and **was never deleted** — as of 2026-08-31 the `csmsynergy` Netlify site
+still exists and still auto-builds `main` into a deploy nobody reads. It is scheduled
+for deletion along with the rest of the Netlify account once CSM Studio's own
+migration finishes its soak; csmsynergy.com itself has served from Cloudflare since
+2026-08-15 and is unaffected either way.
